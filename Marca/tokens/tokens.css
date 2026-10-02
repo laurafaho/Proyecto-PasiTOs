@@ -1,0 +1,29 @@
+/* Proyecto PasiTOs · tokens de diseño v0.1 (borrador, 29-09-2026)
+   Fuente de verdad: manual/guia-de-marca.html. Los marcados PROPUESTA están pendientes de aprobar. */
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap");
+:root{
+  /* Marca (extraídos del logo) */
+  --pp-petroleo:#0C4759;   /* principal */
+  --pp-cielo:#00B0EA;      /* huellas del isotipo */
+  --pp-azul-to:#00A2DB;    /* solo el "TO" y palabras destacadas grandes */
+  --pp-blanco:#FFFFFF;
+  /* Apoyo */
+  --pp-tinta:#072C38;      /* texto largo sobre claro (14,7:1 sobre blanco) */
+  --pp-azul-texto:#0077A8; /* enlaces y azul en texto pequeño (5,0:1 sobre blanco) */
+  --pp-bruma:#E3F5FC;      /* fondos de tarjeta */
+  --pp-niebla:#F4F9FB;     /* fondo general */
+  --pp-sol:#FFC845;        /* PROPUESTA: acento cálido, máx. 5 %, CTA principal */
+  /* Semánticos */
+  --pp-bg:var(--pp-niebla); --pp-surface:var(--pp-blanco); --pp-text:var(--pp-tinta);
+  --pp-heading:var(--pp-petroleo); --pp-link:var(--pp-azul-texto);
+  --pp-cta-bg:var(--pp-sol); --pp-cta-fg:var(--pp-tinta);
+  --pp-cta2-bg:var(--pp-petroleo); --pp-cta2-fg:var(--pp-blanco);
+  /* Tipografía */
+  --pp-font-display:"M PLUS Rounded 1c","Arial Rounded MT Bold",Arial,sans-serif;
+  --pp-font-body:"Nunito Sans",Arial,system-ui,sans-serif;
+  --pp-fs-display:3.5rem; --pp-fs-h1:2.5rem; --pp-fs-h2:1.75rem; --pp-fs-h3:1.25rem; --pp-fs-body:1.0625rem; --pp-fs-small:.8125rem;
+  --pp-lh-heading:1.15; --pp-lh-body:1.6;
+  /* Forma y espacio (múltiplos de 8) */
+  --pp-radius-s:10px; --pp-radius-m:18px; --pp-radius-l:28px; --pp-radius-pill:999px;
+  --pp-space-1:8px; --pp-space-2:16px; --pp-space-3:24px; --pp-space-4:32px; --pp-space-6:48px; --pp-space-8:64px;
+}

@@ -1,0 +1,463 @@
+{
+  "$description": "Proyecto PasiTOs · tokens de diseño web v1.0 (30-09-2026). Formato W3C Design Tokens. Contraste AA 4,5:1 para todo texto; ver identidad-visual.md.",
+  "color": {
+    "marca": {
+      "azul-petroleo": {
+        "$type": "color",
+        "$value": "#0C4759",
+        "$description": "Principal: titulares, texto sobre claro, fondos de impacto, botón principal"
+      },
+      "azul-medio": {
+        "$type": "color",
+        "$value": "#1B7796",
+        "$description": "Enlaces, palabra destacada sobre claro, botón secundario con texto blanco"
+      },
+      "azul-cielo": {
+        "$type": "color",
+        "$value": "#00B0EA",
+        "$description": "Solo gráfico (huellas, iconos, detalles). Nunca texto ni fondo con texto"
+      },
+      "fondo-claro": {
+        "$type": "color",
+        "$value": "#F1FAFD",
+        "$description": "Fondo de secciones alternas"
+      },
+      "blanco": {
+        "$type": "color",
+        "$value": "#FFFFFF",
+        "$description": "Fondo principal y texto sobre azul petróleo o azul medio"
+      }
+    },
+    "apoyo": {
+      "gris-azulado": {
+        "$type": "color",
+        "$value": "#4A6E7B",
+        "$description": "Texto secundario sobre claro"
+      },
+      "bruma": {
+        "$type": "color",
+        "$value": "#EAF6FA",
+        "$description": "Fondo de tarjetas"
+      },
+      "cielo-claro": {
+        "$type": "color",
+        "$value": "#7FD8F7",
+        "$description": "Destacados y enlaces sobre azul petróleo"
+      },
+      "gris-sobre-oscuro": {
+        "$type": "color",
+        "$value": "#AECBD6",
+        "$description": "Texto secundario sobre azul petróleo"
+      }
+    },
+    "externo": {
+      "whatsapp": {
+        "$type": "color",
+        "$value": "#25D366",
+        "$description": "Solo botón de WhatsApp"
+      },
+      "whatsapp-texto": {
+        "$type": "color",
+        "$value": "#0B2E1A",
+        "$description": "Texto del botón de WhatsApp (7,46:1)"
+      }
+    },
+    "logo-solo": {
+      "azul-to": {
+        "$type": "color",
+        "$value": "#00A2DB",
+        "$description": "Solo dentro del logotipo (el 'TO'). No usar en web"
+      }
+    },
+    "opcional": {
+      "sol": {
+        "$type": "color",
+        "$value": "#FFC845",
+        "$description": "Opción B no recomendada: acento cálido para CTA, con texto azul petróleo (6,60:1)"
+      }
+    }
+  },
+  "semantico": {
+    "fondo": {
+      "pagina": {
+        "$type": "color",
+        "$value": "{color.marca.blanco}"
+      },
+      "alterno": {
+        "$type": "color",
+        "$value": "{color.marca.fondo-claro}"
+      },
+      "tarjeta": {
+        "$type": "color",
+        "$value": "{color.apoyo.bruma}"
+      },
+      "oscuro": {
+        "$type": "color",
+        "$value": "{color.marca.azul-petroleo}"
+      }
+    },
+    "texto": {
+      "principal": {
+        "$type": "color",
+        "$value": "{color.marca.azul-petroleo}",
+        "$description": "10,19:1 sobre blanco"
+      },
+      "secundario": {
+        "$type": "color",
+        "$value": "{color.apoyo.gris-azulado}",
+        "$description": "5,52:1 sobre blanco"
+      },
+      "enlace": {
+        "$type": "color",
+        "$value": "{color.marca.azul-medio}",
+        "$description": "5,09:1 sobre blanco"
+      },
+      "destacado": {
+        "$type": "color",
+        "$value": "{color.marca.azul-medio}"
+      },
+      "sobre-oscuro": {
+        "$type": "color",
+        "$value": "{color.marca.blanco}",
+        "$description": "10,19:1 sobre azul petróleo"
+      },
+      "sobre-oscuro-secundario": {
+        "$type": "color",
+        "$value": "{color.apoyo.gris-sobre-oscuro}",
+        "$description": "5,97:1"
+      },
+      "sobre-oscuro-destacado": {
+        "$type": "color",
+        "$value": "{color.apoyo.cielo-claro}",
+        "$description": "6,34:1"
+      }
+    },
+    "boton": {
+      "principal-fondo": {
+        "$type": "color",
+        "$value": "{color.marca.azul-petroleo}"
+      },
+      "principal-texto": {
+        "$type": "color",
+        "$value": "{color.marca.blanco}"
+      },
+      "secundario-fondo": {
+        "$type": "color",
+        "$value": "{color.marca.azul-medio}"
+      },
+      "secundario-texto": {
+        "$type": "color",
+        "$value": "{color.marca.blanco}"
+      },
+      "whatsapp-fondo": {
+        "$type": "color",
+        "$value": "{color.externo.whatsapp}"
+      },
+      "whatsapp-texto": {
+        "$type": "color",
+        "$value": "{color.externo.whatsapp-texto}"
+      }
+    },
+    "grafico": {
+      "acento": {
+        "$type": "color",
+        "$value": "{color.marca.azul-cielo}"
+      }
+    }
+  },
+  "tipografia": {
+    "familia": {
+      "titulos": {
+        "$type": "fontFamily",
+        "$value": [
+          "Barlow Semi Condensed",
+          "Arial Narrow",
+          "Arial",
+          "sans-serif"
+        ],
+        "$description": "Google Fonts, pesos 600 y 700"
+      },
+      "textos": {
+        "$type": "fontFamily",
+        "$value": [
+          "Nunito Sans",
+          "Arial",
+          "system-ui",
+          "sans-serif"
+        ],
+        "$description": "Google Fonts, pesos 400, 600 y 700"
+      },
+      "textos-alternativa-legibilidad": {
+        "$type": "fontFamily",
+        "$value": [
+          "Atkinson Hyperlegible Next",
+          "Arial",
+          "sans-serif"
+        ],
+        "$description": "Opción B, recomendada solo para documentos"
+      }
+    },
+    "google-fonts-url": {
+      "$type": "string",
+      "$value": "https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Nunito+Sans:wght@400;600;700&display=swap"
+    },
+    "peso": {
+      "regular": {
+        "$type": "fontWeight",
+        "$value": 400
+      },
+      "seminegrita": {
+        "$type": "fontWeight",
+        "$value": 600
+      },
+      "negrita": {
+        "$type": "fontWeight",
+        "$value": 700
+      }
+    },
+    "estilos": {
+      "display": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 700,
+            "fontSize": "56px",
+            "lineHeight": 1.05
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 700,
+            "fontSize": "38px",
+            "lineHeight": 1.05
+          }
+        }
+      },
+      "h1": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 700,
+            "fontSize": "44px",
+            "lineHeight": 1.1
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 700,
+            "fontSize": "32px",
+            "lineHeight": 1.1
+          }
+        }
+      },
+      "h2": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 600,
+            "fontSize": "32px",
+            "lineHeight": 1.15
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 600,
+            "fontSize": "26px",
+            "lineHeight": 1.15
+          }
+        }
+      },
+      "h3": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 600,
+            "fontSize": "22px",
+            "lineHeight": 1.25
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.titulos}",
+            "fontWeight": 600,
+            "fontSize": "20px",
+            "lineHeight": 1.25
+          }
+        }
+      },
+      "entradilla": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 400,
+            "fontSize": "20px",
+            "lineHeight": 1.55
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 400,
+            "fontSize": "18px",
+            "lineHeight": 1.55
+          }
+        }
+      },
+      "texto": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 400,
+            "fontSize": "18px",
+            "lineHeight": 1.6
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 400,
+            "fontSize": "17px",
+            "lineHeight": 1.6
+          }
+        }
+      },
+      "boton": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 700,
+            "fontSize": "17px",
+            "lineHeight": 1.3
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 700,
+            "fontSize": "16px",
+            "lineHeight": 1.3
+          }
+        }
+      },
+      "pequeno": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 600,
+            "fontSize": "15px",
+            "lineHeight": 1.45
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 600,
+            "fontSize": "14px",
+            "lineHeight": 1.45
+          }
+        }
+      },
+      "legal": {
+        "escritorio": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 400,
+            "fontSize": "13px",
+            "lineHeight": 1.45
+          }
+        },
+        "movil": {
+          "$type": "typography",
+          "$value": {
+            "fontFamily": "{tipografia.familia.textos}",
+            "fontWeight": 400,
+            "fontSize": "13px",
+            "lineHeight": 1.45
+          }
+        }
+      }
+    }
+  },
+  "radio": {
+    "s": {
+      "$type": "dimension",
+      "$value": "12px"
+    },
+    "m": {
+      "$type": "dimension",
+      "$value": "18px"
+    },
+    "l": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "pildora": {
+      "$type": "dimension",
+      "$value": "999px"
+    }
+  },
+  "espacio": {
+    "1": {
+      "$type": "dimension",
+      "$value": "8px"
+    },
+    "2": {
+      "$type": "dimension",
+      "$value": "16px"
+    },
+    "3": {
+      "$type": "dimension",
+      "$value": "24px"
+    },
+    "4": {
+      "$type": "dimension",
+      "$value": "32px"
+    },
+    "6": {
+      "$type": "dimension",
+      "$value": "48px"
+    },
+    "8": {
+      "$type": "dimension",
+      "$value": "64px"
+    },
+    "12": {
+      "$type": "dimension",
+      "$value": "96px"
+    }
+  },
+  "logo": {
+    "tamano-minimo-horizontal": {
+      "$type": "dimension",
+      "$value": "140px"
+    },
+    "tamano-minimo-vertical": {
+      "$type": "dimension",
+      "$value": "90px"
+    },
+    "tamano-minimo-icono": {
+      "$type": "dimension",
+      "$value": "24px"
+    }
+  }
+}
