@@ -1,0 +1,90 @@
+# ============================================================
+#  Proyecto PasiTOs — configuración del servidor (Apache / Hostalia)
+# ============================================================
+
+Options -Indexes -MultiViews
+DirectorySlash Off
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# --- 1. Siempre https y con www ---------------------------------
+# (solo para el dominio real: así la vista previa de Plesk también funciona)
+RewriteCond %{HTTP_HOST} ^proyectopasitos\.es$ [NC]
+RewriteRule ^ https://www.proyectopasitos.es%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\.proyectopasitos\.es$ [NC]
+RewriteRule ^ https://www.proyectopasitos.es%{REQUEST_URI} [L,R=301]
+
+# --- 2. URLs limpias: sin .html, sin index.html, sin barra final --
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^ / [L,R=301]
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [L,R=301]
+RewriteRule ^(.+)/$ /$1 [L,R=301]
+
+# --- 3. Redirecciones 301 de las páginas antiguas de Witaps -------
+# Equipo y páginas de presentación
+RewriteRule ^sobre-laura$ /nosotros [L,R=301,NC]
+RewriteRule ^equipo$ /nosotros [L,R=301,NC]
+RewriteRule ^home-copia$ / [L,R=301,NC]
+# Evaluación y diagnóstico
+RewriteRule ^valoracion$ /evaluacion-neuropsicologica [L,R=301,NC]
+RewriteRule ^diagnostico-autismo$ /evaluacion-neuropsicologica [L,R=301,NC]
+RewriteRule ^pago-evaluacion$ /evaluacion-neuropsicologica [L,R=301,NC]
+RewriteRule ^evaluacion$ /evaluacion-neuropsicologica [L,R=301,NC]
+# Ayudas y contenido que ahora vive en el blog
+RewriteRule ^sunevo-suenoinfantil$ /blog/sueno-y-autismo-en-la-infancia-comprender-las-necesidades-detras-del-descanso [L,R=301,NC]
+RewriteRule ^canalapoyo$ /familias [L,R=301,NC]
+# Tienda, cursos, webinars y pagos (ya no se venden) -> Formación
+RewriteRule ^store(/.*)?$ /formacion [L,R=301,NC]
+RewriteRule ^curso-masaje-infantil-y-desarrollo-sensorial$ /formacion [L,R=301,NC]
+RewriteRule ^terapia-psicomotriz(-.*)?$ /formacion [L,R=301,NC]
+RewriteRule ^gracias-registro-taller$ /formacion [L,R=301,NC]
+RewriteRule ^webinar-replay$ /formacion [L,R=301,NC]
+RewriteRule ^webinar-tea$ /formacion [L,R=301,NC]
+RewriteRule ^aulasdiversas$ /formacion [L,R=301,NC]
+RewriteRule ^la-comunicacion-y-el-lenguaje-en-el-autismo(-copia)*$ /formacion [L,R=301,NC]
+RewriteRule ^alimentacion$ /formacion [L,R=301,NC]
+RewriteRule ^integracionsensorial$ /formacion [L,R=301,NC]
+RewriteRule ^educacionyautismo$ /formacion [L,R=301,NC]
+RewriteRule ^profesional$ /formacion [L,R=301,NC]
+RewriteRule ^teacompano$ /formacion [L,R=301,NC]
+RewriteRule ^teacompanomas$ /formacion [L,R=301,NC]
+RewriteRule ^trastorno-del-espectro-autista$ /formacion [L,R=301,NC]
+RewriteRule ^pasitos-lectores$ /formacion [L,R=301,NC]
+RewriteRule ^noteacompano$ /formacion [L,R=301,NC]
+RewriteRule ^pagocursoteacompleto$ /formacion [L,R=301,NC]
+RewriteRule ^tallercole$ /formacion [L,R=301,NC]
+
+# --- 4. Servir /pagina desde pagina.html --------------------------
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
+</IfModule>
+
+# --- Compresión y caché ----------------------------------------
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml text/plain
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# --- Proteger la configuración del correo ------------------------
+<Files "smtp-config.php">
+  Require all denied
+</Files>
