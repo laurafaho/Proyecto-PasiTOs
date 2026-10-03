@@ -192,4 +192,32 @@
 - Mi hijo no habla a los 2 años (enlazar logopedia cuando confirmes profesional)
 - ¿Terapia en casa o en un centro? (enlazar portada)
 
+---
+
+## INTEGRACIÓN CON MARCA
+
+**Tono de voz (según manual de marca v1.0):**
+- Cálida, experta y práctica
+- Neuroafirmativa (hablamos de personas, no etiquetas)
+- Siempre un paso siguiente
+- Prudentes con la salud (sin garantías)
+
+**Pilares a reflejar:**
+1. Escucha sin juicio (primero escuchamos)
+2. Vida real (contextos naturales: casa, cole)
+3. Rigor con cercanía (evidencia, sin tecnicismos)
+4. Equipo alrededor del niño (familia, colegio, equipo)
+5. Claridad (precios, horarios, procesos)
+
+**Tagline:** "Terapia infantil que va a casa y al cole"
+
+**Palabras SÍ:** neurodivergente, autista, TDAH, acompañar, a domicilio, en el cole, contextos naturales, perfil sensorial, apoyos, fortalezas, orientación gratuita
+**Palabras NO:** sufre, padece, curar, normalizar, arreglar, déficit (salvo oficial), garantizado, paciente, caso
+
+**Línea final de cada artículo:** "¿Resuena contigo? Escríbenos por WhatsApp, te llamamos gratis en 24-48 h laborales, sin compromiso."
+
+---
+
 **Generado:** 2026-10-03 | **Responsable:** Laura Fajardo / Proyecto PasiTOs
+**Basado en:** Manual de marca v1.0 (30-09-2026) + Tono de voz v1.0 (30-09-2026) + Metodología de 3 pilares
+**Próximo paso:** Tú o Laura escribis el contenido; yo lo paso a HTML
